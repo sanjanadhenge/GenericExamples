@@ -8,28 +8,33 @@ namespace Generics
 {
     internal class FindMaximum<T> where T : IComparable
     {
-        T a, b, c;
-        public FindMaximum(T a, T b, T c)
+        T a, b, c,d;
+        public FindMaximum(T a, T b, T c,T d)
         {
            this.a = a;
            this.b = b;
            this.c = c;
+           this.d = d;
 
         }
-      
-       public void FindMax()
+
+        public void FindMax()
         {
-            if (a.CompareTo(b) > 0 && a.CompareTo(c) > 0 || a.CompareTo(b) >= 0 && a.CompareTo(c) > 0 || a.CompareTo(b) > 0 && a.CompareTo(c) >= 0)
+            if (a.CompareTo(b) > 0 && a.CompareTo(c) > 0 && a.CompareTo(d) > 0 || a.CompareTo(b) >= 0 && a.CompareTo(c) > 0  && a.CompareTo(d) > 0 || a.CompareTo(b) > 0 && a.CompareTo(c) >= 0 &&  a.CompareTo(d) > 0|| a.CompareTo(b) > 0 && a.CompareTo(c) > 0 && a.CompareTo(d) >= 0)
             {
                 Console.WriteLine("{0} is Maximum", a);
             }
-            if (b.CompareTo(a) > 0 && b.CompareTo(c) > 0 || b.CompareTo(a) >= 0 && b.CompareTo(c) > 0 || b.CompareTo(a) > 0 && b.CompareTo(c) >= 0)
+            if (b.CompareTo(a) > 0 && b.CompareTo(c) > 0 && b.CompareTo(d) > 0 || b.CompareTo(a) >= 0 && b.CompareTo(c) > 0 && b.CompareTo(d) > 0 || b.CompareTo(a) > 0 && b.CompareTo(c) >= 0 && b.CompareTo(d) > 0 || b.CompareTo(a) > 0 && b.CompareTo(c) > 0 && b.CompareTo(d) >= 0)
             {
                 Console.WriteLine("{0} is Maximum", b);
             }
-            if (c.CompareTo(a) > 0 && c.CompareTo(b) > 0 || c.CompareTo(a) >= 0 && c.CompareTo(b) > 0 || c.CompareTo(a) > 0 && c.CompareTo(b) >= 0)
+            if (c.CompareTo(a) > 0 && c.CompareTo(b) > 0 && c.CompareTo(d) > 0 || c.CompareTo(a) >= 0 && c.CompareTo(b) > 0 && c.CompareTo(d) > 0 || c.CompareTo(a) > 0 && c.CompareTo(b) >= 0 && c.CompareTo(d) > 0 || c.CompareTo(a) > 0 && c.CompareTo(b) > 0 && c.CompareTo(d) >= 0)
             {
                 Console.WriteLine("{0} is Maximum", c);
+            }
+            if (d.CompareTo(a) > 0 && d.CompareTo(b) > 0 && d.CompareTo(c) > 0 || d.CompareTo(a) >= 0 && d.CompareTo(b) > 0 && d.CompareTo(c) > 0 || d.CompareTo(a) > 0 && d.CompareTo(b) >= 0 && d.CompareTo(c) > 0 || d.CompareTo(a) > 0 && d.CompareTo(b) > 0 && d.CompareTo(c) >= 0)
+            {
+                Console.WriteLine("{0} is Maximum", d);
             }
         }
        public void FindMaxInt()
