@@ -11,7 +11,8 @@ namespace Generics
         public static void Main(string[] args)
         {
             FindMaximum findMaximum = new FindMaximum();
-            findMaximum.FindMaxInt();
+            //findMaximum.FindMaxInt();
+            findMaximum.FindMaxFloat();
         }
     }
 }
