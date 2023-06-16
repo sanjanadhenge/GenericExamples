@@ -17,25 +17,30 @@ namespace Generics
            this.d = d;
 
         }
+        public void PrintMax(T value)
+        {
+            Console.WriteLine("{0} is Maximum", value);
+        }
 
         public void FindMax()
         {
             if (a.CompareTo(b) > 0 && a.CompareTo(c) > 0 && a.CompareTo(d) > 0 || a.CompareTo(b) >= 0 && a.CompareTo(c) > 0  && a.CompareTo(d) > 0 || a.CompareTo(b) > 0 && a.CompareTo(c) >= 0 &&  a.CompareTo(d) > 0|| a.CompareTo(b) > 0 && a.CompareTo(c) > 0 && a.CompareTo(d) >= 0)
             {
-                Console.WriteLine("{0} is Maximum", a);
+                PrintMax(a);
             }
             if (b.CompareTo(a) > 0 && b.CompareTo(c) > 0 && b.CompareTo(d) > 0 || b.CompareTo(a) >= 0 && b.CompareTo(c) > 0 && b.CompareTo(d) > 0 || b.CompareTo(a) > 0 && b.CompareTo(c) >= 0 && b.CompareTo(d) > 0 || b.CompareTo(a) > 0 && b.CompareTo(c) > 0 && b.CompareTo(d) >= 0)
             {
-                Console.WriteLine("{0} is Maximum", b);
+                PrintMax(b);
             }
             if (c.CompareTo(a) > 0 && c.CompareTo(b) > 0 && c.CompareTo(d) > 0 || c.CompareTo(a) >= 0 && c.CompareTo(b) > 0 && c.CompareTo(d) > 0 || c.CompareTo(a) > 0 && c.CompareTo(b) >= 0 && c.CompareTo(d) > 0 || c.CompareTo(a) > 0 && c.CompareTo(b) > 0 && c.CompareTo(d) >= 0)
             {
-                Console.WriteLine("{0} is Maximum", c);
+                PrintMax(c);
             }
             if (d.CompareTo(a) > 0 && d.CompareTo(b) > 0 && d.CompareTo(c) > 0 || d.CompareTo(a) >= 0 && d.CompareTo(b) > 0 && d.CompareTo(c) > 0 || d.CompareTo(a) > 0 && d.CompareTo(b) >= 0 && d.CompareTo(c) > 0 || d.CompareTo(a) > 0 && d.CompareTo(b) > 0 && d.CompareTo(c) >= 0)
             {
-                Console.WriteLine("{0} is Maximum", d);
+                PrintMax(d);
             }
+           
         }
        public void FindMaxInt()
         {
