@@ -6,10 +6,18 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    internal class FindMaximum
+    internal class FindMaximum<T> where T : IComparable
     {
+        T a, b, c;
+        public FindMaximum(T a, T b, T c)
+        {
+           this.a = a;
+           this.b = b;
+           this.c = c;
+
+        }
       
-       public void FindMax<T>(T a, T b, T c) where T : IComparable
+       public void FindMax()
         {
             if (a.CompareTo(b) > 0 && a.CompareTo(c) > 0 || a.CompareTo(b) >= 0 && a.CompareTo(c) > 0 || a.CompareTo(b) > 0 && a.CompareTo(c) >= 0)
             {
